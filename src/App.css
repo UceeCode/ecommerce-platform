@@ -1,38 +1,48 @@
-/* theme dark */
-.bg-black{
-  background-color: black;
+/* Default light mode styles */
+body {
+  background-color: #fff;
+  color: #333;
 }
-.bg-light-black{
-  background-color: #262626 !important;
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212; /* Dark background for the body */
+  color: white; /* White text color for dark mode */
 }
-.text-black{
+
+/* For buttons in dark mode */
+body.dark .btn {
+  color: white; /* Button text color white */
+}
+body.dark .confirm {
   color: black;
 }
-.text-light-black{
-  color: #262626;
+/* For product cards */
+body.dark .product-card {
+  background-color: #2b2b2b; /* Dark background for the product card */
 }
-.bg-dark-primary{
-  background-color: #fcbc73 !important;
+body.dark .modal-ti{
+  color: black;
 }
-.text-dark-primary{
-  color: #fcbc73 !important;
-}
-
-/* theme light */
-.bg-light{
-  background-color: white;
-}
-.bg-light-2{
-  background-color: #dadcde;
-}
-.bg-light-primary{
-  background-color: #191659 !important;
-}
-.text-light-primary{
-  color: #191659 !important;
+body.dark .product-title,
+body.dark .product-price {
+  color: white; /* White text for titles and price */
 }
 
+/* For primary buttons in dark mode */
+body.dark .bg-dark-primary {
+  background-color: #333; /* Dark background for buttons */
+}
 
-.react-tel-input input{
-  width: 100% !important;
+body.dark .bg-light-primary {
+  background-color: #ff4500; /* Light background for buttons in dark mode */
+}
+
+/* Other elements */
+body.dark button {
+  color: white; /* White button text */
+}
+
+body.dark .product-title:hover {
+  color: #ff4500; /* Hover effect for dark mode */
 }

@@ -1,0 +1,109 @@
+/* General Container */
+.home-container {
+    padding-top: 100px; /* Pushes everything down a bit */
+}
+
+/* Search Heading */
+.search-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Light Mode Styles */
+.custom-navbar.light .search-heading {
+    color: white;
+}
+
+/* Dark Mode Styles */
+.dark .search-heading {
+    color: white;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 80%; /* Set to 80% width to make it wider */
+    max-width: 700px; /* Ensure it doesn't get too wide on larger screens */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers the search bar */
+    border: 1px solid #ddd; /* Add a light border for a more classic look */
+}
+
+/* Search Bar Hover Effect */
+.search-bar:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: #ff4500; /* Adds a subtle hover effect with border color */
+}
+
+/* Search Input */
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 15px;
+    font-size: 1rem;
+    flex-grow: 1;
+    color: #333;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Input */
+.dark .search-input {
+    color: #fff;
+}
+
+/* Search Input Focus Effect */
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+/* Search Icon */
+.search-icon {
+    color: #000; /* Set to black for a classic style */
+    transition: transform 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+/* Search Icon Hover */
+.search-bar:hover .search-icon {
+    transform: scale(1.2);
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-heading {
+        font-size: 1.8rem;
+    }
+    
+    /* Adjust search bar width for smaller screens */
+    .search-bar {
+        width: 90%; /* Make it smaller on smaller screens */
+    }
+    
+    /* Adjust search input size on smaller screens */
+    .search-input {
+        font-size: 0.9rem;
+    }
+}

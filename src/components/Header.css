@@ -1,0 +1,96 @@
+/* General Navbar Styles */
+.custom-navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+.logo {
+    font-size: 30px;
+}
+/* Light Mode Styles */
+.custom-navbar.light {
+    background: linear-gradient(90deg, #f8f9fa, #ffffff);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+.custom-navbar.dark {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+.custom-navbar.dark .brand-logo {
+    color: white;
+}
+.custom-navbar.dark .logo {
+    color: white;
+}
+.custom-navbar.dark .nav-icon{
+    color: white;
+}
+/* Brand Logo */
+.brand-logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff4500;
+    transition: color 0.3s ease;
+}
+
+.brand-logo:hover {
+    color: #ff5722;
+}
+
+/* Navigation Icons */
+.nav-icon {
+    color: inherit;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Cart Link */
+.nav-cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.cart-text {
+    margin-left: 5px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    left: 18px;
+    background: #ff4500;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* Account Link */
+.nav-account {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-account:hover, .nav-cart:hover {
+    color: #ff5722;
+}

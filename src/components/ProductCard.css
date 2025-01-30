@@ -1,0 +1,81 @@
+/* Modern product card styles */
+
+.product-image-container {
+    background-color: #f7f7f7;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-img {
+    object-fit: contain; /* Ensures the image covers the space while maintaining aspect ratio */
+    width: 100%; /* Makes the image take up the full width of the container */
+    height: 100%; /* Makes the image take up the full height of the container */
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.product-title:hover {
+    color: #ff4500;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+.bg-dark-primary {
+    background-color: #333 !important;
+}
+
+.bg-light-primary {
+    background-color: #ff4500 !important;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Dark mode styles */
+.custom.dark .product-card {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.dark .product-title {
+    color: #fff;
+}
+
+.dark .product-price {
+    color: #fff;
+}
+
+/* Ensure the dark mode classes are applied properly */
+.dark .bg-dark-primary {
+    background-color: #222;
+}
+
+.dark .bg-light-primary {
+    background-color: #ff5733;
+}

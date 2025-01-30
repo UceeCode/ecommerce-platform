@@ -4,6 +4,7 @@ import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 import { BiSearch } from 'react-icons/bi';
 import SearchFilter from 'react-filter-search';
 import ProductCard from '../components/ProductCard';
+import './Home.css'
 
 const Home = () => {
     const [theme] = useThemeHook();
@@ -21,37 +22,37 @@ const Home = () => {
     },[]);
 
     return (
-        <Container className="py-4">
+        <Container className="home-container">
             <Row className="justify-content-center">
                 <Col xs={10} md={7} lg={6} xl={4} className="mb-3 mx-auto text-center">
-                    <h1 className={theme? 'text-light my-5': 'text-black my-5'}>Search products</h1>
-                    <InputGroup className="mb-3">
-                        <InputGroup.Text className={theme? 'bg-black text-dark-primary': 'bg-light text-light-primary'}>
-                            <BiSearch size="2rem" />
-                        </InputGroup.Text>
+                    <h1 className={`search-heading ${theme ? 'dark' : 'light'}`}>
+                        Search products
+                    </h1>
+                    <div className="search-bar">
+                        <BiSearch size="2rem" className="search-icon" />
                         <FormControl 
-                            placeholder="Search"
+                            placeholder="Search for products..."
                             value={searchInput}
                             onChange={(e)=> setSearchInput(e.target.value)}
-                            className={theme? 'bg-light-black text-light': 'bg-light text-black'}
+                            className={`search-input ${theme ? 'dark' : ''}`}
                         />
-                    </InputGroup>
+                    </div>
                 </Col>
                 <SearchFilter 
                     value={searchInput}
                     data={productData}
                     renderResults={results =>(
-                        <Row className="justify-content-center">
+                        <Row className="product-grid">
                             {results.map((item, i)=>(
                                 <ProductCard data={item} key={i} />
                             ))}
                         </Row>
                     )}
                 />
-                
             </Row>
         </Container>
     );
+    
 };
 
 export default Home;
