@@ -2,6 +2,8 @@
 
 A simple cart application built using React, React-Bootstrap, and React-Use-Cart for managing the shopping cart and checkout process. It allows users to add, update, remove items from the cart, and proceed with the checkout after entering shipping details.
 
+## LINK TO VIEW: uceecode.github.io/ecommerce-platform/
+
 ## Features
 - Add, remove, and update item quantities in the cart.
 - Calculate the total price of the cart.
